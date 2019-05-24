@@ -16,15 +16,7 @@ export default {
   computed: {
   },
   created () {
-    let data = {
-      source: 'huobi'
-    }
-    this.$http({
-      url: '/user/btcusdt',
-      method: 'get', 
-      params: data
-    }).then(res => {
-    })
+    
   },
   methods: {
   }

@@ -1,5 +1,5 @@
 <template>
-  <div name="m-index" class="container">
+  <div name="m-index">
     <Header></Header>
     <transition name="tran">
       <router-view></router-view>
@@ -11,8 +11,8 @@
 <script>
 /* 页面基本框架 */
 
-import Header from '@/components/common/header'
-import Footer from '@/components/common/footer'
+import Header from '@/components/home/header'
+import Footer from '@/components/home/footer'
 
 export default {
   name: 'm-index',
@@ -24,6 +24,10 @@ export default {
     return {
       isMain: false
     }
+  },
+  created() {
+    // 初始化页面
+    this.$store.dispatch('getUser')
   }
 }
 </script>
